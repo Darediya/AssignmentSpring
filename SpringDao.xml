@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    
+<!--    <bean id="person" class="package2.Person" autowire="byType" />
+
+        <bean id="invisible" class="package2.Ability" >
+            <property name="skill" value="Eat and sleep a lot" />
+        </bean>-->
+<!--    <context:component-scan base-package="com.ibm.dao" />-->
+
+<!-- Initialization for data source -->
+<!--   <bean id="dataSource" 
+      class = "org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name = "driverClassName" value = "org.apache.derby.jdbc.ClientDriver"/>
+      <property name = "url" value = "jdbc:derby://localhost:1527/HCC"/>
+      <property name = "username" value = "Sid"/>
+      <property name = "password" value = "Sid"/>
+   </bean>
+
+    Definition for studentJDBCTemplate bean 
+   <bean id = "studentJDBCTemplate" 
+      class = "MarchTHIRTYFIRST.StudentJDBCTemplate">
+      <property name = "dataSource" ref = "dataSource" />    
+   </bean>-->
+       <bean id="student" class="AssignmentSpring.Student" autowire="byType">
+        <property name="firstName" value="Sadique"/>
+        <property name="lastName" value="Darediya"/>
+        <property name="DoB" value="03/10/1992"/>    
+    </bean>
+    
+    <bean id="address" class="AssignmentSpring.Address">
+        <property name="street" value="6703 Hornwood dr"/>
+        <property name="zip" value="77074"/>
+        <property name="city" value="houston"/>
+    </bean>
+    
+    <bean id="grade" class="AssignmentSpring.Grade">
+        <property name="subject" value="HIST"/>
+        <property name="grade" value="A"/>
+    </bean>
+   
+   
+   
+</beans>
